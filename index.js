@@ -4,6 +4,8 @@ const fs=require('fs');
 const http=require('http');
 const { dirname } = require('path');
 const url= require('url');
+const slugify= require('slugify');
+
 
 //files
 //blocking , synchronous way
@@ -119,7 +121,7 @@ else {
 }
    
 });
-
-server.listen(8000,'127.0.0.1', ()=>{
-    console.log("listening from 8000");
+const port = process.env.PORT || 8000;
+server.listen(port, '0.0.0.0', () => {
+    console.log(`Server listening on port ${port}`);
 });
