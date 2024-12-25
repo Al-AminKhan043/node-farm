@@ -74,7 +74,7 @@ const tempProduct= fs.readFileSync(`${__dirname}/starter/templates/product.html`
 
 //overview page
 
-if(  pathname=== '/overview'){
+if( pathname==='/' || pathname=== '/overview'){
     res.writeHead(200,{
         'Content-type': 'text/html'
      })
